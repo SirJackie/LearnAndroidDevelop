@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C01Views"
+        android:textSize="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="2dp"
+        android:id="@+id/appTitle"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Name"
+        android:textSize="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/appTitle"
+        android:id="@+id/nameInput"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movies You Like:"
+        android:textSize="28dp"
+        android:layout_below="@id/nameInput"
+        android:id="@+id/tView1"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tView1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/relLayoutForCheckBoxes">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harry Potter"
+            android:textSize="20dp"
+            android:id="@+id/cbHarry"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matrix"
+            android:textSize="20dp"
+            android:id="@+id/cbMatrix"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cbHarry"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joker"
+            android:textSize="20dp"
+            android:id="@+id/cbJoker"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cbMatrix"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marital State You're In:"
+        android:textSize="28dp"
+        android:layout_below="@id/relLayoutForCheckBoxes"
+        android:id="@+id/tView2"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@id/tView2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Married"
+            android:textSize="18dp"
+            android:id="@+id/rbMarried"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single"
+            android:textSize="18dp"
+            android:id="@+id/rbSingle"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In a Relationship"
+            android:textSize="18dp"
+            android:id="@+id/rbInRel"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="28dp"
+        android:layout_below="@id/radioGroup"
+        android:id="@+id/btnSubmit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result:\nWaiting for submission..."
+        android:textSize="18dp"
+        android:layout_below="@id/btnSubmit"
+        android:id="@+id/tViewResult"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:textAlignment="center"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tViewResult"
+        android:layout_margin="20dp"
+        android:id="@+id/progressBar"/>
+
+
+</RelativeLayout>
